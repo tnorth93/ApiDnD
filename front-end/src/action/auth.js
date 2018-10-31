@@ -18,7 +18,7 @@ export const remove = () => ({
 // ASYNC
 // ======================================================
 
-export const signupRequest = user = store => {
+export const signupRequest = user = (store) => {
   return superagent.post(`${API_URL}${routes.SIGNUP_BACKEND}`)
     .send(user)
     // .withCredentials();

@@ -10,11 +10,11 @@ class App extends React.Component {
       <div>
         <BrowserRouter>
           <div>
-            <Route path='*' Component={}/>
-            <Route path='/' Component={}/>
-            <Route path='/signup' Component={}/>
-            <Route path='/login' Component={}/>
-            <Route path='/dashboard' Component={}/>
+            <Route path='*' Component={AuthRedirect}/>
+            <Route path='/' Component={Landing}/>
+            <Route path='/signup' Component={Landing}/>
+            <Route path='/login' Component={Landing}/>
+            <Route path='/dashboard' Component={Dashboard}/>
           </div>
         </BrowserRouter>
       </div>

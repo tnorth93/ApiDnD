@@ -18,9 +18,9 @@ class AuthRedirect extends React.Component {
       destinationRoute = routes.ROOT;
     }
     return (
-      <React.fragment>
-        { destinationRoute ?  <Redirect to={destinationRoute}/> : undefined}
-      </React.fragment>
+      <div>
+        { destinationRoute ? <Redirect to={destinationRoute}/> : undefined }
+      </div>
     );
   }
 }
