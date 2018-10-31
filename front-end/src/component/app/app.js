@@ -1,20 +1,21 @@
 import React from 'react';
-import { BroswerRouter, Route } from 'react-router-dom';
+import { BrowserRouter, Route } from 'react-router-dom';
 import Landing from '../landing/landing';
 import Dashboard from '../dashboard/dashboard';
-import AuthRedirect from '../auth-redirect/auth-redirect';
+import AuthRedirect from '../auth-redirect';
 
 class App extends React.Component {
   render() {
+    console.log('iamhere');
     return (
       <div>
         <BrowserRouter>
           <div>
             <Route path='*' Component={AuthRedirect}/>
-            <Route path='/' Component={Landing}/>
-            <Route path='/signup' Component={Landing}/>
-            <Route path='/login' Component={Landing}/>
-            <Route path='/dashboard' Component={Dashboard}/>
+            <Route exact path='/' Component={Landing}/>
+            <Route exact path='/signup' Component={Landing}/>
+            <Route exact path='/login' Component={Landing}/>
+            <Route exact path='/dashboard' Component={Dashboard}/>
           </div>
         </BrowserRouter>
       </div>
