@@ -18,7 +18,7 @@ export const remove = () => ({
 // ASYNC
 // ======================================================
 
-export const signupRequest = user = (store) => {
+export const signupRequest = user => (store) => {
   return superagent.post(`${API_URL}${routes.SIGNUP_BACKEND}`)
     .send(user)
     // .withCredentials();
@@ -27,6 +27,10 @@ export const signupRequest = user = (store) => {
     });
 };
 
-export const loginRequest = user = store => {
-
+export const loginRequest = user => (store) => {
+  return superagent.get(`${API_URL}${routes.LOGIN_BACKEND}`) // eslint-disable-line
+    .auth(user.username, user.password)
+    .then((response) => {
+      return store.dispatch(set(response.token));
+    });
 };

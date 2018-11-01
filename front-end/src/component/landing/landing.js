@@ -27,8 +27,8 @@ class Landing extends React.Component {
   render() {
     const rootJSX = <div>
       <h2> Welcome to ApiDND! </h2>
-      <Link to='/signup'>Sign up to play ApiDnD</Link>
-      <Link to='/login'>Login to an existing account</Link>
+      <p><Link to='/signup'>Sign up to play ApiDnD </Link></p>
+      <p><Link to='/login'>Login to an existing account</Link></p>
     </div>;
 
     const signUpJSX = <div>

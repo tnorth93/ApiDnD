@@ -31,10 +31,10 @@ class AuthForm extends React.Component {
     const signupJSX =
       <input
         name='email'
-        placeholder=='email'
+        placeholder='email'
         type='email'
         value={this.state.email}
-        onChange{this.handleChange}
+        onChange={this.handleChange}
       />;
 
       return(
