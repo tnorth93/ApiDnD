@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDom from 'react-dom';
 import { Provider } from 'react-redux';
-require('dotenv').config();
+require('dotenv');
 
 import App from './component/app/app';
 import createStore from './create-store';
